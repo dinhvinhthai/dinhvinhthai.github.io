@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        button:after{
+            content: 'some content';
+            display: block;
+        }
+        button:hover:after,
+        button:focus:after,
+        button:active:after{
+            content: 'some other content';
+            display: block;
+            }
+    </style>
+
+</head>
+<form>
+    <label for="lang-switch">
+        <span lang="vi">Ngôn ngữ</span>
+        <span lang="en">Language</span>
+    </label>
+    <select id="lang-switch">
+        <option value="vi" selected>Tiếng Việt</option>
+        <option value="en">English</option>
+    </select>
+    <button value="en">Content</button>
+</form>
+
+<p>
+    <span lang="vi">Tiếng Việt nè</span>
+    <span lang="en">Text in English</span>
+</p>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+$('[lang]').hide(); // hide all lang attributes on start.
+$('[lang="vi"]').show(); // show just Korean text (you can change it)
+$('#lang-switch').change(function () { // put onchange event when user select option from select
+    var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+    switch (lang) {
+        case 'en':
+            $('[lang]').hide();
+            $('[lang="en"]').show();
+        break;
+        case 'vi':
+            $('[lang]').hide();
+            $('[lang="vi"]').show();
+        break;
+        default:
+            $('[lang]').hide();
+            $('[lang="vi"]').show();
+        }
+});
+</script>
+</html>
