@@ -35,28 +35,28 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing-en", {
-        strings: ["Web Developer"],
+        strings: ["Software Developer","Web Developer","Designer"],
         typeSpeed: 120,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-vi", {
-        strings: ["Nhà phát triển Web"],
+        strings: ["Nhà phát triển phần mềm", "Nhà phát triển web"],
         typeSpeed: 120,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2-en", {
-        strings: ["Hello, I'm Đinh Vĩnh Thái, a Web Developer"],
+        strings: ["Hello, I'm Đinh Vĩnh Thái"],
         typeSpeed: 40,
         backSpeed: 20,
         loop: true
     });
     
     var typed = new Typed(".typing-2-vi", {
-        strings: ["Xin chào, tôi là Đinh Vĩnh Thái, một nhà phát triển web"],
+        strings: ["Xin chào, tôi là Đinh Vĩnh Thái"],
         typeSpeed: 40,
         backSpeed: 20,
         loop: true
